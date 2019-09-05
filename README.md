@@ -9,14 +9,14 @@ This is a [Alexa](https://developer.amazon.com/it/alexa) skill boilerplate using
   - [Usage](#usage)
 
 
-## Basic requirements
+### Basic requirements
 
 **[ngrok](https://ngrok.com/)** and **[ask-cli](https://developer.amazon.com/es/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)** must be installed before initializing the project.
 
 **[cookiecutter](https://github.com/cookiecutter/cookiecutter)** is required to clone this boilerplate.
 
 
-## Initialization
+### Initialization
 
 Use cookiecutter to clone the boilerplate:
 
@@ -24,7 +24,7 @@ Use cookiecutter to clone the boilerplate:
 $ cookiecutter https://github.com/20tab/django-alexa-template
 ```
 
-## Usage
+### Usage
 
 Only one command to deploy and test your skill using your local web server.
 
