@@ -21,7 +21,7 @@ This is a [Alexa](https://developer.amazon.com/it/alexa) skill boilerplate using
 Use cookiecutter to clone the boilerplate:
 
 ```shell
-$ cookiecutter repo
+$ cookiecutter https://github.com/20tab/django-alexa-template
 ```
 
 ## Usage
