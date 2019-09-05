@@ -1,0 +1,6 @@
+{
+    "project_name": "Django Alexa Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "A simple boilerplate to create an alexa skill using python and Django as local web service",
+    "version": "0.1.0"
+  }

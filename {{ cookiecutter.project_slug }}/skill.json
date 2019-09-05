@@ -1,0 +1,23 @@
+{
+    "manifest": {
+      "publishingInformation": {
+        "locales": {
+          "it-IT": {
+            "name": "{{ cookiecutter.project_name }}",
+            "examplePhrases": [
+              "Apri {{ cookiecutter.project_name }}"
+            ]
+          }
+        }
+      },
+      "apis": {
+        "custom": {
+          "endpoint": {
+            "sourceDir": "alexa/py/lambda_upload",
+            "uri": "ask-custom-{{ cookiecutter.project_name }}"
+          }
+        }
+      },
+      "manifestVersion": "1.0"
+    }
+  }
