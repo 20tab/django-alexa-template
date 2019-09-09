@@ -166,3 +166,7 @@ deploy/hosts
 
 # Others
 *.bak
+
+# Alexa
+
+alexa/py/lambda_upload/

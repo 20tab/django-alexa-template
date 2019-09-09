@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "{{ cookiecutter.project_name }}",
+            "invocationName": "{{ cookiecutter.project_slug }}",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",

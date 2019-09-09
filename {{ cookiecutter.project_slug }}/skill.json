@@ -5,7 +5,7 @@
           "it-IT": {
             "name": "{{ cookiecutter.project_name }}",
             "examplePhrases": [
-              "Apri {{ cookiecutter.project_name }}"
+              "Apri {{ cookiecutter.project_slug }}"
             ]
           }
         }
@@ -13,8 +13,8 @@
       "apis": {
         "custom": {
           "endpoint": {
-            "sourceDir": "alexa/py/lambda_upload",
-            "uri": "ask-custom-{{ cookiecutter.project_name }}"
+            "sourceDir": "alexa/lambda_upload",
+            "uri": "ask-custom-{{ cookiecutter.project_slug }}"
           }
         }
       },

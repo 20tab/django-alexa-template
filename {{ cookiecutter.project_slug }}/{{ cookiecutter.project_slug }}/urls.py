@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django_ask_sdk.skill_adapter import SkillAdapter
-from alexa.py.skill_builder import skill_builder
+from alexa.skill_handlers.skill_builder import skill_builder
 from django.conf import settings
 
 

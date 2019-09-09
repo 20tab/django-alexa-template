@@ -21,7 +21,8 @@ def run(c, deploy=False):
     set_skill_json()
     if deploy:
         c.run("ask deploy")
-    c.run("python manage.py runserver")
+    if DEBUG:
+        c.run("python manage.py runserver")
 
 
 def get_public_urls():
@@ -41,16 +42,17 @@ def set_skill_json():
     Read ngrok apis to check public url and change it in endpoint key in skill.json file.
     Return True if endpoint is changed else False.
     """
-    aws_endpoint = {
-        "sourceDir": "alexa/py/lambda_upload",
-        "uri": "ask-custom-{{ cookiecutter.project_slug }}"
-    }
-    local_endpoint = {
-          "uri": f"{get_public_urls()['https']}/alexa/",
-          "sslCertificateType": "Wildcard"
+    if DEBUG:
+        endpoint = {
+            "uri": f"{get_public_urls()['https']}/alexa/",
+            "sslCertificateType": "Wildcard"
+        }
+    else:
+        endpoint = {
+            "sourceDir": "alexa/lambda_upload",
+            "uri": "ask-custom-{{ cookiecutter.project_slug }}"
         }
     if DEBUG:
-        endpoint = local_endpoint
         config = None
         with open(".ask/config", "r") as f:
             config = json.loads(f.read())
@@ -62,7 +64,26 @@ def set_skill_json():
             with open(".ask/config", "w") as f:
                 f.write(json.dumps(config, indent=2))
     else:
-        endpoint = aws_endpoint
+        config = None
+        with open(".ask/config", "r") as f:
+            config = json.loads(f.read())
+            try:
+                lambda_ref = [
+                    {
+                        "functionName": "",
+                        "alexaUsage": [
+                            "custom/default"
+                        ],
+                        "runtime": "python3.6",
+                        "handler": "skill.handler"
+                    }
+                ]
+                config["deploy_settings"]["default"]["resources"]["lambda"] = lambda_ref
+            except KeyError:
+                config = None
+        if config:
+            with open(".ask/config", "w") as f:
+                f.write(json.dumps(config, indent=2))
     with open("skill.json", "r") as f:
         skill_json = json.loads(f.read())
 

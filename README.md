@@ -26,7 +26,13 @@ $ cookiecutter https://github.com/20tab/django-alexa-template
 
 ### Usage
 
-Only one command to deploy and test your skill using your local web server.
+First of all you have to expose your local web server to a public url, using ngrok:
+
+```shell
+$ ngrok http 8000
+```
+
+After this run command to deploy and test your skill using your local web server.
 
 To run without deploy your skill:
 
@@ -40,6 +46,9 @@ If skill changes you need to deploy it. To simplify this process you can use:
 $ make run d=--deploy
 ```
 
+> **NOTE**: "make run" command is simply a wrapper using python and ask-cli commands.
+
+
 In every case the terminal will show django runserver logs:
 
 ```shell
@@ -51,4 +60,5 @@ Django version 2.2.5, using settings 'myskill.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
+
 
