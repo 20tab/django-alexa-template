@@ -1,0 +1,32 @@
+{
+	"version": "1.0",
+	"session": {
+		"new": true,
+		"sessionId": "",
+		"application": {
+			"applicationId": ""
+		},
+		"user": {
+			"userId": ""
+		}
+	},
+	"context": {
+		"System": {
+			"application": {
+				"applicationId": ""
+			},
+			"user": {
+				"userId": ""
+			},
+			"apiEndpoint": "",
+			"apiAccessToken": ""
+		}
+	},
+	"request": {
+		"type": "LaunchRequest",
+		"requestId": "",
+		"timestamp": "2019-08-31T09:03:15Z",
+		"locale": "it-IT",
+		"shouldLinkResultBeReturned": false
+	}
+}
