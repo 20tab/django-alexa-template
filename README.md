@@ -11,9 +11,11 @@ This is a [Alexa](https://developer.amazon.com/it/alexa) skill boilerplate using
 
 ### Basic requirements
 
-**[ngrok](https://ngrok.com/)** and **[ask-cli](https://developer.amazon.com/es/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)** must be installed before initializing the project.
+- **[ngrok](https://ngrok.com/)** and **[ask-cli](https://developer.amazon.com/es/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)** must be installed before initializing the project.
 
-**[cookiecutter](https://github.com/cookiecutter/cookiecutter)** is required to clone this boilerplate.
+- **[cookiecutter](https://github.com/cookiecutter/cookiecutter)** is required to clone this boilerplate.
+
+- also **[virtualenv](https://virtualenv.pypa.io/en/latest/installation/)** is required, to prepare the virtual environment used by Django 
 
 
 ### Initialization
@@ -30,6 +32,12 @@ First of all you have to expose your local web server to a public url, using ngr
 
 ```shell
 $ ngrok http 8000
+```
+
+Then
+
+```shell
+$ cd <skill_dirname>
 ```
 
 After this run command to deploy and test your skill using your local web server.
