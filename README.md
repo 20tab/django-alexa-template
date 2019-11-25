@@ -69,4 +69,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
+To run test on your web service, just launch the following command:
+```shell
+$ make test
+```
 
